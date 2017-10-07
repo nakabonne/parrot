@@ -1,16 +1,19 @@
 package main
 
 import (
+	"flag"
 	"log"
 	"net/http"
 )
 
 func main() {
+	var port = flag.String("p", "8080", "Set Port")
+	flag.Parse()
 	http.HandleFunc("/", request)
 
-	log.Println("Ready!")
+	log.Println("The server is now ready to accept connections on port " + *port)
 
-	if err := http.ListenAndServe(":4000", nil); err != nil {
+	if err := http.ListenAndServe(":"+*port, nil); err != nil {
 		log.Fatal("ListenAndSearver:", err)
 	}
 }
