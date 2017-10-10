@@ -1,5 +1,5 @@
 # parrot
-A cli tool to display received parameters
+A cli tool to display the log of requests
 
 # Usage
 
@@ -7,7 +7,7 @@ A cli tool to display received parameters
 $ go build -o parrot
 $ parrot -p 8080
 
-// Throw any query
+// Throw any request
 $ curl -d key=value http://localhost:8080
 
 // displayed your request
