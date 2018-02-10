@@ -22,6 +22,7 @@ func main() {
 	var port = flag.String("p", "8080", "Set Port")
 	flag.Parse()
 	http.HandleFunc("/", handler)
+	http.HandleFunc("/users", handler)
 
 	log.Println("The server is now ready to accept connections on port " + *port)
 

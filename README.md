@@ -1,5 +1,5 @@
 # parrot
-A cli tool to display the log of requests
+A cli tool to display the log of requests.
 
 # Usage
 
